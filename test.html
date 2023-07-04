@@ -1,0 +1,19 @@
+<script type="text/javascript">
+	// Function to retrieve IP address
+	function getIPAddress() {
+	  // Send a request to a remote server that echoes back the client's IP address
+	  fetch('https://api.ipify.org?format=json')
+		.then(response => response.json())
+		.then(data => {
+		  // Display the IP address
+		  console.log('Your IP address is: ' + data.ip);
+		})
+		.catch(error => {
+		  console.log('Error:', error);
+		});
+	}
+  
+	// Call the function to get the IP address
+	getIPAddress();
+  </script>
+  
